@@ -20,7 +20,7 @@ public class ArrCharOps {
         System.out.println(compareTo("apple", "banana"));
         System.out.println(compareTo("apple", "applepie"));
         System.out.println(compareTo("Zoo", "zoo"));
-        System.out.println(compareTo("", "zoo"));
+        System.out.println(compareTo("123", "zoo"));
         System.out.println(hashCode(arr1));
         System.out.println(hashCode(arr2));
     }
@@ -172,11 +172,11 @@ public class ArrCharOps {
      *         return -2 if there is an error with the input.
      */
     public static int compareTo(String str1, String str2) {
-        if (str1.length()==0 || str2.length()==0 || str1 == null || str2 == null){
+        if (str1 == null || str2 == null){
             return -2;
         }
-        String Lstr1= str1.toLowerCase();
-        String Lstr2= str2.toLowerCase();
+        //String Lstr1= str1.toLowerCase();
+        //String Lstr2= str2.toLowerCase();
         int shortLength = Math.min(str1.length(), str2.length());
         int shortString = 0;
         if (str1.length()<str2.length()) {
@@ -185,9 +185,9 @@ public class ArrCharOps {
             shortString = 1;
         }
         for (int i=0 ; i<shortLength; i++){
-            if (Lstr1.charAt(i) < Lstr2.charAt(i)){
+            if (str1.charAt(i) < str2.charAt(i)){
                 return -1;
-            } else if (Lstr1.charAt(i) > Lstr2.charAt(i)){
+            } else if (str1.charAt(i) > str2.charAt(i)){
                 return 1;
             } 
         }
