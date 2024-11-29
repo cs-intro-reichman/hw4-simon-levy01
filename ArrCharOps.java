@@ -175,8 +175,6 @@ public class ArrCharOps {
         if (str1 == null || str2 == null || str1.length()==0 || str2.length()==0){
             return -2;
         }
-        //String Lstr1= str1.toLowerCase();
-        //String Lstr2= str2.toLowerCase();
         int shortLength = Math.min(str1.length(), str2.length());
         int shortString = 0;
         if (str1.length()<str2.length()) {
