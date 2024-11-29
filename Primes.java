@@ -12,9 +12,9 @@ public class Primes {
                 }
             }
         }
-        System.out.println("prime numbers up to " + n + ":");
+        System.out.println("Prime numbers up to " + n + ":");
         int count = 0;
-        for (int i = 2 ; i< n ; i++){
+        for (int i = 2 ; i< n+1 ; i++){
             if (arr[i]==true){
                 System.out.println(i);
                 count ++;
